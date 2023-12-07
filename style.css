@@ -1,0 +1,209 @@
+/*page design*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: 0.4s all linear;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*header*/
+
+header{
+    font-size:20px ;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: darkolivegreen;
+    box-shadow: 10px 1rem 1rem rgba(red, green, blue, alpha);
+    opacity: 0.9;
+}
+
+header img{
+    width: 50px;height: 40px;padding-bottom: -10px;filter: saturate(8);
+
+}
+
+header .navbar a{
+    font-size: 22px;
+    font-weight: normal;
+    color: darksalmon;
+    padding-left: 10px;
+}
+
+header .logo{
+    font-size: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: normal;
+    color: darksalmon;
+}
+
+header .navbar a:hover{
+    font-size: 22px;
+    font-weight: 900;
+    color: darkgoldenrod;
+    margin-left: 10px;
+    transition: 1s;
+    background-color: darkkhaki;
+    padding: 18px 10px 18px 10px;
+}
+
+#menu-bar{
+    font-size:25px;
+    cursor: pointer;
+    color: rgb(66, 152, 9);
+    border: 1px solid  rgb(121, 152, 9);
+    border-radius: 5px;
+    padding: 8px;
+    display: none;
+}
+
+
+    
+/*home*/
+
+section{
+    padding: 10px;
+}
+
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    min-height: 500px;
+    align-items: center;
+    background:url(../images/AK-pizzahut-2020.jpg) no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+
+.home .content{
+    flex: 1 1 30px;
+    margin-top: 30px;
+    padding: 50px;
+    background: rgb(109,138,8);
+    background: linear-gradient(90deg, rgba(109,138,8,0.7091211484593838) 39%, rgba(133,167,16,1) 50%, rgba(71,91,4,1) 90%);
+}
+
+
+.home .content h3{
+    font-size: 53px;
+    color: rgb(253, 255, 245);
+}
+
+
+
+.home .content p1{
+    font-size: 20px;
+    color: darksalmon;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+
+
+.home .content p2{
+    font-size: 24px;
+    color: rgb(247, 255, 245);
+}
+
+
+.btn{
+    padding: 10px;
+    border: 3px solid rgb(29, 37, 1);
+    color: rgb(52, 61, 61);
+    font-size: 25px;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.btn:hover{
+    background-color: chocolate;
+    color: bisque;
+    box-shadow: inset200px 0 0 0 chocolate ;
+    transition: 1.5s all;
+}
+
+/*category*/
+
+.heading{
+    text-align: center;
+    font-size: 35px;
+    color: rgb(0,0,0);
+    padding: 30px;
+}
+
+.heading span{
+    font-size: 30px;
+    color: chocolate;
+}
+
+.category .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category .box-container .box{
+    flex: 1 1 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 10px black;
+    border:1px solid black;
+    cursor:pointer;
+    border-radius: 20px;
+}
+/*menu*/
+
+/*gallery*/
+
+/*review*/
+
+/*order*/
+
+/*footer*/
+
+
+/*RWD Phone */
+
+/*hearder*/
+@media (max-width:600px){
+    #menu-bar{
+        display: initial;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+    header .navbar{
+        position: absolute;
+        top: 80px; left: 0; right: 0;
+        background-color: white;
+        border-top: 3px solid gray;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    header .navbar a{
+    display: block;
+    font-size: 22px;
+    font-weight: normal;
+    color: cornsilk;
+    margin: 10px; padding: 6px;
+    border-left: 3px solid gray;
+    background-color: darkseagreen;
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+        padding: 10px;
+    }
+}
